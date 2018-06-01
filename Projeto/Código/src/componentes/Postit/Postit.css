@@ -1,0 +1,35 @@
+.postit {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 1rem;
+    background: #ECDDF3;
+    border-radius: 2px;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14);
+    transition: transform .2s;
+}
+
+.postit--editando {
+    pointer-events: none;
+    transform: scale(1.1);
+}
+
+.postit__titulo {
+    font-weight: bold;
+}
+
+.postit__botao {
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: auto;
+}
+
+.postit__titulo,
+.postit__texto,
+.postit__botao {
+    pointer-events: auto;
+    font-size: inherit;
+    border: none;
+    background: inherit;
+}

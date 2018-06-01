@@ -1,40 +1,24 @@
 import React from 'react'
-import Botao from '../formulario/botao/Botao'
-import logo from './logo.png'
+import Logo from './Logo/Logo'
+import Menu from './Menu/Menu'
 import './Navbar.css'
 
 
 function Navbar(props) {
-    function handleClick(e) {
-        e.preventDefault()
-
-        if (props.usuario) {
-            props.deslogaUsuario();
-        } else {
-            props.logaUsuario();
-        }
-    }
-
     return (
-        <nav className="navbar">
-            <img className="navbar-logo" src={logo} alt="Logo" />
+        <header className="navbar">
+            <a onClick={props.onLogoClick}>
+                <Logo />
+            </a>
 
-            <ul className="navbar-links">
-                <li>
-                    <a>Quem somos</a>
-                </li>
-                <li>
-                    <a>
-                        <Botao cor="vermelho">Contato</Botao>
-                    </a>
-                </li>
-                <li>
-                    <a onClick={handleClick}>
-                        {props.usuario ? 'Sair' : 'Login'}
-                    </a>
-                </li>
-            </ul>
-        </nav>
+            <Menu 
+                usuario={props.usuario}
+                onQuemSomosClick={props.onQuemSomosClick}
+                onContatoClick={props.onContatoClick}
+                onLoginClick={props.onLoginClick}
+                onSairClick={props.onSairClick}
+            />
+        </header>
     )
 }
 

@@ -1,0 +1,17 @@
+.home {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: calc(100vh - 60px);
+    padding: 1.5rem 1rem 0;
+    background-image: url('./alunas.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 992px) {
+    .home {
+        padding: 3rem 10% 0;
+    }
+}
